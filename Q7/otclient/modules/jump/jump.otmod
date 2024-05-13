@@ -1,0 +1,9 @@
+Module
+  name: jump
+  description: Opens jump window
+  author: none
+  website:
+  sandboxed: true
+  scripts: [ jump ]
+  @onLoad: init()
+  @onUnload: terminate()

@@ -1,0 +1,16 @@
+MainWindow
+  id: jumpWindow
+  !text: tr('Jump')
+  size: 480 340
+
+  @onEnter: modules.jump.hide()
+  @onEscape: modules.jump.hide()
+  @onTick: modules.jump.onTick()
+  @onGeometryChanged: modules.jump.onGeometryChanged(oldRect, newRect)
+
+
+  Button
+    id: slidingButton
+    !text: tr('Jump!')
+    width: 64
+    @onClick: modules.jump.resetButtonPosition()
